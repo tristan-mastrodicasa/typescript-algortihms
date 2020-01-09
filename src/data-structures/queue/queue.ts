@@ -30,7 +30,7 @@ export class Queue {
   }
 
   /**
-   * Add a node to the back of the equeue
+   * Add a node to the back of the queue
    * @param data Data for the node to hold
    */
   public enqueue(data: any) {
