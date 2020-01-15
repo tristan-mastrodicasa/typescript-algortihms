@@ -80,4 +80,28 @@ export class LinkedList {
 
   }
 
+  /**
+   * Returns an array of nodes
+   */
+  public toArray(): LinkedListNode[] {
+    const nodes = [];
+
+    let currentNode = this.head;
+    while (currentNode) {
+      nodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+
+    return nodes;
+  }
+
+  /**
+   * Stringify the linked list
+   * @param  callback Custom callback to stringify the linkedlist
+   * @return          Stringified version of the linked list
+   */
+  public toString(callback: (v: any) => string): string {
+    return this.toArray().map(node => node.toString(callback)).toString();
+  }
+
 }

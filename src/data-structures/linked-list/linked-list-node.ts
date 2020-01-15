@@ -13,4 +13,13 @@ export class LinkedListNode {
     this.data = data;
   }
 
+  /**
+   * Convert node to a string with the help of a custom callback
+   * @param  callback Callback to format the data to a string
+   * @return          Stringified version of the node
+   */
+  public toString(callback: (v: any) => string): string {
+    return callback ? callback(this.data) : `${this.data}`;
+  }
+
 }
