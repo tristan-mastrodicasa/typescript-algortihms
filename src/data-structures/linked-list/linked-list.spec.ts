@@ -1,6 +1,6 @@
 import { LinkedList } from './';
 
-fdescribe('linked list', () => {
+describe('linked list', () => {
 
   it('should initialize', () => {
     const linkedList = new LinkedList();
